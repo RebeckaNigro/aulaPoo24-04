@@ -14,9 +14,16 @@ public class Time {
         this.anoCriação = anoCriação;
         atletas = new ArrayList<>();
     }
+    
+    public Atleta getAtleta (int i){
+      return atletas.get(i);
+
+    }
+
     //método que recebe um atleta e adiciona na lista
     public void adicionaAtleta(Atleta a){
         atletas.add(a);
+        a.setTime(this);
     }
     
     //método que recebe um nome, procura o atleta com o nome
@@ -28,6 +35,7 @@ public class Time {
             Atleta a = atletas.get(i);
             if(a.getNome().equals(nome)){ //comparando o nome
                 atletas.remove(a);
+                a.setTime(null);
                 removido = true;                       
                 break;
             }
@@ -45,8 +53,7 @@ public class Time {
         System.out.printf("Atletas (%d): \n", atletas.size());
         for(int i=0; i<atletas.size(); i++){
             Atleta a = atletas.get(i);
-            System.out.printf("\t%s - %s - %.2f\n", 
-                    a.getNome(), a.getFunção(), a.getAltura());
+            System.out.printf("\t%s - %s - %.2f\n", a.getNome(), a.getFunção(), a.getAltura());
         }
     }
 

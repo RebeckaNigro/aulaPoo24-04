@@ -5,14 +5,27 @@ public class Atleta {
     private String função;
     private float altura;
 
+    private Time time;
+
     public Atleta(String nome, String função, float altura) {
         this.nome = nome;
         this.função = função;
         this.altura = altura;
     }
 
+
+
+
     public String getNome() {
         return nome;
+    }
+
+    public Time getTime() {
+        return time;
+    }
+
+    public void setTime(Time time) {
+        this.time = time;
     }
 
     public void setNome(String nome) {

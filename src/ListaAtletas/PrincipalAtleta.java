@@ -20,6 +20,7 @@ public class PrincipalAtleta {
             Atleta a = listaAtletas.get(i);
             if(a.getNome().equals("Rony"))
                 rony = a;
+            break;
         }
         
         listaAtletas.remove(rony);

@@ -9,7 +9,12 @@ public class PrincipalTime {
         t.adicionaAtleta(new Atleta("Dunga", "MC", 1.82f));
         t.adicionaAtleta(new Atleta("Romário", "ATA", 1.53f));
 
+//        t.removeAtleta("Dunga");
+
+        t.getAtleta(0).setTime(t);
         t.removeAtleta("Dunga");
+        System.out.println(t.getAtleta(0).getTime().getNome());
+
         
         t.imprimir();
     }
